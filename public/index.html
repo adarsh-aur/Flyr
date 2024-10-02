@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyr</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Flyr</h1>
+        </div>
+        <form action="/generate" method="post">
+            <div class="form-section">
+                <label for="images">Images:</label>
+                <input type="text" id="images" name="images" placeholder="Enter image URLs" required>
+
+                <label for="theme">Select Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="Business">Business</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Durga Puja">Durga Puja</option>
+                </select>
+
+                <label for="message">Promotional Message:</label>
+                <input type="text" id="message" name="message" placeholder="Enter your message here" required>
+
+                <label for="colorPalette">Color Palette:</label>
+                <input type="text" id="colorPalette" name="colorPalette" placeholder="e.g. #ff0000,#00ff00" required>
+
+                <label for="aspectRatio">Aspect Ratio:</label>
+                <input type="text" id="aspectRatio" name="aspectRatio" placeholder="e.g. 16:9" required>
+
+                <label for="resolution">Resolution:</label>
+                <input type="text" id="resolution" name="resolution" placeholder="e.g. 1920x1080" required>
+
+                <label for="format">Format:</label>
+                <select id="format" name="format">
+                    <option value="JPEG">JPEG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="GIF">GIF</option>
+                </select>
+
+                <button type="submit" class="generate-btn">Generate Output</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

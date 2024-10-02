@@ -1,0 +1,76 @@
+{
+  "title": "FLYR",
+  "description": "",
+  "parameters": {
+    "groundingPromptConfig": {
+      "disabled": true,
+      "groundingConfig": {
+        "sources": [
+          {
+            "type": "WEB"
+          }
+        ]
+      }
+    },
+    "stopSequences": [],
+    "temperature": 1,
+    "tokenLimits": 8192,
+    "topP": 0.95
+  },
+  "testDataV2": [],
+  "systemInstruction": {
+    "parts": [
+      {
+        "text": "You are an AI designed to generate banner design prompts based on the input. Given the input product images, promotional offer, color palette, and theme, your task is to create a detailed description of 4 different banner layouts that a designer can use to generate creative banner variations. The description should cover:\n\n1. Product image placement (left, center, right, etc.)\n2. Background type (solid, gradient, festive, etc.)\n3. Text placement and style\n4. Use of overlay elements or additional graphical elements (icons, shapes, etc.)\n\nAlways generate 4 different banner design prompts, each with distinct layout suggestions based on the provided input."
+      }
+    ]
+  },
+  "inputPrefixes": [
+    "Banner Generation"
+  ],
+  "outputPrefixes": [
+    "Banner"
+  ],
+  "examples": [
+    {
+      "inputs": [
+        "\"Product images: User uploads\",\n            \"Promotional offer: Save up to 70%\",\n            \"Color palette: #FF5733, #C70039, #900C3F\",\n            \"Theme: Independence Day\",\n            \"Output specifications: { 'size': '1920x1080', 'resolution': '150dpi', 'format': 'png' }\""
+      ],
+      "outputs": [
+        "  \"1. Banner 1: Generate a banner where the product images are prominently displayed in the center. The background should feature a dynamic gradient starting with deep orange (#FF5733) transitioning to rich red (#C70039). Place the promotional text 'Save up to 70%' at the top, using bold white lettering to contrast against the vibrant background. Add subtle decorative elements, such as fireworks or patriotic icons, gently positioned around the edges to evoke a festive mood without overwhelming the design.\",\n            \"2. Banner 2: Generate a banner with product images aligned vertically on the left side of the banner. The background should incorporate a celebratory theme with gentle fireworks and soft gradients that fade between #FF5733 and #900C3F. Position the promotional text 'Save up to 70%' on the right using an elegant, modern font in white, ensuring it stands out against the busy yet balanced background. Add light festive icons along the border to accentuate the theme.\",\n            \"3. Banner 3: Generate a split-background banner with the product images aligned neatly on the left. The background on the right side should feature a subtle gradient flowing from #C70039 to #900C3F, creating a smooth transition that gives depth to the overall look. The promotional text should be placed on the right side in a large bold font, with a translucent overlay for added contrast. Decorative borders should have festive patterns to emphasize the Independence Day theme.\",\n            \"4. Banner 4: Generate a banner with the product images placed along the bottom-right corner, giving more prominence to the large, centrally placed promotional text. The background should have a layered design, with a base color of #FF5733 and a semi-transparent pattern overlay featuring festive symbols. The font used for the promotional offer should be bold, with shadows and highlights to create a three-dimensional effect. Accent the banner with subtle gradients and borders that blend with the palette.\"\n       "
+      ]
+    },
+    {
+      "inputs": [
+        "\"Product images: User uploads\",\n            \"Promotional offer: 50% OFF on fresh vegetables\",\n            \"Color palette: #3498DB, #2ECC71, #F1C40F\",\n            \"Theme: Black Friday\",\n            \"Output specifications: { 'size': '800x400', 'resolution': '72dpi', 'format': 'jpg' }\""
+      ],
+      "outputs": [
+        " \"1. Banner 1: Generate a banner featuring horizontally aligned product images at the center of the design. The background should utilize a smooth gradient from bright blue (#3498DB) to green (#2ECC71), subtly blending into yellow (#F1C40F) at the edges. Place the promotional text '50% OFF on fresh vegetables' in a bold, white font at the top-right, ensuring it stands out. Add a modern twist with shadowed elements to give depth and visual appeal.\",\n            \"2. Banner 2: Generate a banner with the product images in the center. The background should be vivid, using patterns like diagonal stripes or geometric shapes, with a color palette matching #3498DB and #F1C40F. The promotional text should be placed at the bottom-left in an elegant serif font, with subtle shadow effects to make the text pop. Integrate festive overlays, like subtle patterns or borders, to enhance the Black Friday theme.\",\n            \"3. Banner 3: Generate a clean, minimalist banner where product images are arranged at the left. The background should be neutral, using a soft gradient between #2ECC71 and #F1C40F, with the promotional text positioned on the right in a large, modern font. Light festive icons should frame the banner's edges for a soft, celebratory vibe.\",\n            \"4. Banner 4: Generate a dynamic split-screen banner with the product images taking up the left half, while the promotional offer dominates the right. The background should feature a diagonal gradient, moving from a vibrant blue (#3498DB) to green (#2ECC71), and the text should be in bold, with some three-dimensional shadow effects. Add decorative corner accents to tie in the festive Black Friday theme.\"\n      "
+      ]
+    },
+    {
+      "inputs": [
+        "\"Product images: User uploads\",\n            \"Promotional offer: 25% OFF on select items\",\n            \"Color palette: #1ABC9C, #2C3E50, #16A085\",\n            \"Theme: Summer Sale\",\n            \"Output specifications: { 'size': '1200x600', 'resolution': '100dpi', 'format': 'jpeg' }\""
+      ],
+      "outputs": [
+        " \"1. Banner 1: Generate a banner where the product images are aligned diagonally across the center, with a light summer-themed background that incorporates a gentle gradient between teal (#1ABC9C) and a cool dark shade (#2C3E50). The promotional text '25% OFF on select items' should be centered in bold white, overlaid on the diagonal gradient to maintain balance and clarity. Add subtle summery icons, like suns or waves, near the borders to evoke a fresh, seasonal feel.\",\n            \"2. Banner 2: Generate a banner with product images staggered along the bottom edge. The background should feature vibrant summer patterns\\u2014such as floral or beach motifs\\u2014incorporating colors from the palette. The promotional text should be bold and placed at the top, highlighted with a translucent shadow effect to give depth. Add soft patterns in the background to maintain an elegant yet lively aesthetic.\",\n            \"3. Banner 3: Generate a banner with the product images covering the full width. The background should be solid, using a soft gradient of teal (#16A085) to dark blue (#2C3E50), with the promotional text placed on the right side. The text should be bold, with slight transparency to reveal the background pattern subtly.\",\n            \"4. Banner 4: Generate an overlay design, where product images and text interact. Use curved lines separating the product images on one side and the promotional text on the other. The background should be playful, with patterns inspired by summer, and colors from the palette incorporated subtly. The promotional text should be large and in a clean font, ensuring it remains the focal point of the banner.\"\n     "
+      ]
+    }
+  ],
+  "testData": [
+    {
+      "inputs": [
+        "\"Product images: User uploads\",\n            \"Promotional offer: 10% off sitewide\",\n            \"Color palette: #1ABC9C, #2C3E50, #16A085\",\n            \"Theme: Durga Puja\",\n            \"Output specifications: { 'size': '1200x600', 'resolution': '100dpi', 'format': 'jpeg' }\""
+      ]
+    }
+  ],
+  "type": "freeform",
+  "prompt": {
+    "parts": [
+      {
+        "text": "Generate a banner design with the following inputs:\nProduct images\nPromotional offer text\nColor palette\nTheme\nOutput specifications like size, resolution and format\nFor each input, generate four unique and aesthetically varied banner design description with great details. In each design, vary the text placement, background type, product images placement, and overlay elements to create visually appealing banners. Provide detailed descriptions of the banner designs, including information on the background, font styles, gradients, overlays, borders, and overall composition to ensure clarity in the design generation process. Ensure the designs fit within the specified output specifications."
+      }
+    ]
+  },
+  "model": "gemini-1.5-flash-002"
+}
