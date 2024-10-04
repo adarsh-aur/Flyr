@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 // Initialize PredictionServiceClient
 const client = new PredictionServiceClient({
-  keyFilename: './alpine-beacon-436712-v9-bf2273a9660e.json', // Ensure the path is correct
+  keyFilename: './filename.json', // Ensure the path is correct
 });
 
 
@@ -35,7 +35,7 @@ app.post('/generate', async (req, res) => {
     };
 
     const request = {
-        endpoint: client.endpointPath('alpine-beacon-436712-v9', 'europe-west4', '3819118454707847168'),
+        endpoint: client.endpointPath('service-account-name', 'europe-west4', 'service-account-id'),
         instances: [
             {
                 "Product images": inputData.productImages,
